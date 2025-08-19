@@ -1,0 +1,10 @@
+/* Styles par défaut pour Azure DevOps Diff */
+.repos-summary-diff-container .added-content {
+  background-color: #efbdef !important;
+  color: black !important;
+}
+
+.repos-summary-diff-container .removed-content {
+  background-color: #ff5c5c !important;
+  color: black !important;
+}

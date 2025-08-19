@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Azure DevOps Diff Color Customizer",
+  "version": "1.0.0",
+  "description": "Personnalise les couleurs des différences dans Azure DevOps",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://vmproddevops:8080/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://vmproddevops:8080/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Configurer les couleurs Azure DevOps"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

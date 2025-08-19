@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration des couleurs Azure DevOps</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Configuration des couleurs</h2>
+    <p class="subtitle">Azure DevOps Diff Customizer</p>
+    
+    <div class="section">
+      <h3>Contenu ajouté (.added-content)</h3>
+      <div class="color-group">
+        <div class="color-input-group">
+          <label for="addedBgColor">Couleur de fond :</label>
+          <input type="color" id="addedBgColor" value="#efbdef">
+        </div>
+        <div class="color-input-group">
+          <label for="addedTextColor">Couleur du texte :</label>
+          <input type="color" id="addedTextColor" value="#000000">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Contenu supprimé (.removed-content)</h3>
+      <div class="color-group">
+        <div class="color-input-group">
+          <label for="removedBgColor">Couleur de fond :</label>
+          <input type="color" id="removedBgColor" value="#ff5c5c">
+        </div>
+        <div class="color-input-group">
+          <label for="removedTextColor">Couleur du texte :</label>
+          <input type="color" id="removedTextColor" value="#000000">
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <h3>Aperçu</h3>
+      <div class="preview-container">
+        <div class="preview-added" id="previewAdded">+ Ligne ajoutée</div>
+        <div class="preview-removed" id="previewRemoved">- Ligne supprimée</div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="saveBtn" class="btn btn-primary">Sauvegarder</button>
+      <button id="resetBtn" class="btn btn-secondary">Réinitialiser</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
