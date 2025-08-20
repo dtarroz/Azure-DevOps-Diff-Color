@@ -73,13 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chrome.storage.sync.set({ azureDevOpsColors: colors }, () => {
       showStatus('Couleurs sauvegardées !', 'success');
-      
-      // Mettre à jour les onglets Azure DevOps ouverts
-      chrome.tabs.query({ url: 'http://vmproddevops:8080/*' }, (tabs) => {
-        tabs.forEach(tab => {
-          chrome.tabs.reload(tab.id);
-        });
-      });
     });
   }
 
