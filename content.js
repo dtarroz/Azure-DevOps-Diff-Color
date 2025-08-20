@@ -34,10 +34,14 @@ chrome.storage.sync.get(['azureDevOpsColors'], (result) => {
   } else {
     // Couleurs par défaut
     const defaultColors = {
-      addedBg: '#efbdef',
-      addedText: 'black',
-      removedBg: '#ff5c5c',
-      removedText: 'black'
+      addedLineBg: '#EAF5EA',
+      addedLineText: '#191919',
+      addedBg: '#D7ECD7',
+      addedText: '#191919',
+      removedLineBg: '#F7E5E5',
+      removedLineText: '#191919',
+      removedBg: '#F0CECE',
+      removedText: '#191919'
     };
     applyCustomColors(defaultColors);
   }
