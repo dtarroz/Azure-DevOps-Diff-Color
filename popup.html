@@ -12,29 +12,45 @@
     <p class="subtitle">Azure DevOps Diff Customizer</p>
     
     <div class="section">
-      <h3>Contenu ajouté (.added-content)</h3>
+      <h3>Contenu ajouté</h3>
       <div class="color-group">
         <div class="color-input-group">
+          <label for="addedLineBgColor">Couleur de fond de la ligne :</label>
+          <input type="color" id="addedLineBgColor">
+        </div>
+        <div class="color-input-group">
+          <label for="addedLineTextColor">Couleur du texte de la ligne :</label>
+          <input type="color" id="addedLineTextColor">
+        </div>
+        <div class="color-input-group">
           <label for="addedBgColor">Couleur de fond :</label>
-          <input type="color" id="addedBgColor" value="#efbdef">
+          <input type="color" id="addedBgColor">
         </div>
         <div class="color-input-group">
           <label for="addedTextColor">Couleur du texte :</label>
-          <input type="color" id="addedTextColor" value="#000000">
+          <input type="color" id="addedTextColor">
         </div>
       </div>
     </div>
 
     <div class="section">
-      <h3>Contenu supprimé (.removed-content)</h3>
+      <h3>Contenu supprimé</h3>
       <div class="color-group">
         <div class="color-input-group">
+          <label for="removedLineBgColor">Couleur de fond de la ligne :</label>
+          <input type="color" id="removedLineBgColor">
+        </div>
+        <div class="color-input-group">
+          <label for="removedLineTextColor">Couleur du texte de la ligne :</label>
+          <input type="color" id="removedLineTextColor">
+        </div>
+        <div class="color-input-group">
           <label for="removedBgColor">Couleur de fond :</label>
-          <input type="color" id="removedBgColor" value="#ff5c5c">
+          <input type="color" id="removedBgColor">
         </div>
         <div class="color-input-group">
           <label for="removedTextColor">Couleur du texte :</label>
-          <input type="color" id="removedTextColor" value="#000000">
+          <input type="color" id="removedTextColor">
         </div>
       </div>
     </div>
@@ -42,8 +58,8 @@
     <div class="preview-section">
       <h3>Aperçu</h3>
       <div class="preview-container">
-        <div class="preview-added" id="previewAdded">+ Ligne ajoutée</div>
-        <div class="preview-removed" id="previewRemoved">- Ligne supprimée</div>
+        <div class="preview-added" id="previewAddedLine">+ Ligne <span id="previewAdded">ajoutée</span></div>
+        <div class="preview-removed" id="previewRemovedLine">- Ligne <span id="previewRemoved">supprimée</span></div>
       </div>
     </div>
 

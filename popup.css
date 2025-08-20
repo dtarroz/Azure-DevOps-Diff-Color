@@ -88,22 +88,6 @@ input[type="color"]:hover {
   font-size: 12px;
 }
 
-.preview-added, .preview-removed {
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.preview-added {
-  background-color: #efbdef;
-  color: black;
-}
-
-.preview-removed {
-  background-color: #ff5c5c;
-  color: black;
-}
-
 .buttons {
   display: flex;
   gap: 8px;
