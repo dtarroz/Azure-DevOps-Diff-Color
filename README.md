@@ -59,7 +59,6 @@ Cette extension n'est pas disponible sur le Chrome Web Store. Pour l'installer :
 Azure-DevOps-Diff-Color/
 ├── manifest.json          # Configuration de l'extension
 ├── content.js             # Script injecté dans les pages
-├── styles.css            # Styles CSS par défaut
 ├── popup.html            # Interface de configuration
 ├── popup.css             # Styles de l'interface
 ├── popup.js              # Logique de l'interface

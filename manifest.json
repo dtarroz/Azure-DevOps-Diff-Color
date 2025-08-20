@@ -13,7 +13,6 @@
   "content_scripts": [
     {
       "matches": ["http://vmproddevops:8080/*"],
-      "css": ["styles.css"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
