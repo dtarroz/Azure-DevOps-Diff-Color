@@ -45,7 +45,3 @@ Cette extension n'est pas disponible sur le Chrome Web Store. Pour l'installer :
 - L'extension ne fonctionne que sur `http://vmproddevops:8080/*`
 - Les préférences sont sauvegardées avec `chrome.storage.sync`
 - Utilise `!important` pour s'assurer que les styles prennent le dessus
-
-## 📄 License
-
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
