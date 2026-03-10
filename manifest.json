@@ -12,7 +12,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://vmproddevops:8080/*"],
+      "matches": ["http://vmproddevops:8080/*", "https://vmproddevops.val.local/*"],
       "js": ["content.js"],
       "run_at": "document_end"
     }

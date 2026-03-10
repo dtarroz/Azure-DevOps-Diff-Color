@@ -1,5 +1,6 @@
 // JavaScript pour le popup de configuration
 document.addEventListener('DOMContentLoaded', () => {
+  const enable = document.getElementById('enable');
   const addedLineBgColor = document.getElementById('addedLineBgColor');
   const addedLineTextColor = document.getElementById('addedLineTextColor');
   const addedBgColor = document.getElementById('addedBgColor');
@@ -27,6 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     removedBg: '#F0CECE',
     removedText: '#191919'
   };
+
+  // Charger l'activation au démarrage
+  function loadEnable() {
+    chrome.storage.sync.get(['azureDevOpsEnabled'], (result) => {
+      enable.checked = result.azureDevOpsEnabled !== false; // Par défaut activé
+    });
+  }
 
   // Charger les couleurs sauvegardées
   function loadColors() {
@@ -56,6 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
     previewRemovedLine.style.color = removedLineTextColor.value;
     previewRemoved.style.backgroundColor = removedBgColor.value;
     previewRemoved.style.color = removedTextColor.value;
+  }
+
+  // Sauvegarder l'état activé/désactivé
+  function saveEnable() {
+    const isEnabled = enable.checked;
+    chrome.storage.sync.set({ azureDevOpsEnabled: isEnabled });
   }
 
   // Sauvegarder les couleurs
@@ -103,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Event listeners
+  enable.addEventListener('click', saveEnable);
+
   addedLineBgColor.addEventListener('input', updatePreview);
   addedLineTextColor.addEventListener('input', updatePreview);
   addedBgColor.addEventListener('input', updatePreview);
@@ -116,5 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
   resetBtn.addEventListener('click', resetColors);
 
   // Charger les couleurs au démarrage
+  loadEnable();
   loadColors();
 });
